@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="jumbotron bg-light p-5 rounded">
+    <h1 class="display-4">Welcome to Inventory Management System</h1>
+    <p class="lead">Manage your products, locations, and track inventory movements efficiently.</p>
+    <hr class="my-4">
+    <div class="row mt-4">
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <i class="bi bi-box-seam" style="font-size: 3rem; color: #0d6efd;"></i>
+                    <h5 class="card-title mt-3">Products</h5>
+                    <p class="card-text">Manage your product catalog</p>
+                    <a href="{{ url_for('products') }}" class="btn btn-primary">View Products</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <i class="bi bi-geo-alt" style="font-size: 3rem; color: #198754;"></i>
+                    <h5 class="card-title mt-3">Locations</h5>
+                    <p class="card-text">Manage warehouse locations</p>
+                    <a href="{{ url_for('locations') }}" class="btn btn-success">View Locations</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <i class="bi bi-arrow-left-right" style="font-size: 3rem; color: #ffc107;"></i>
+                    <h5 class="card-title mt-3">Movements</h5>
+                    <p class="card-text">Track product movements</p>
+                    <a href="{{ url_for('movements') }}" class="btn btn-warning">View Movements</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-center">
+                <div class="card-body">
+                    <i class="bi bi-file-earmark-bar-graph" style="font-size: 3rem; color: #dc3545;"></i>
+                    <h5 class="card-title mt-3">Report</h5>
+                    <p class="card-text">View inventory balances</p>
+                    <a href="{{ url_for('report') }}" class="btn btn-danger">View Report</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
